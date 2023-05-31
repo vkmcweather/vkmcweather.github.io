@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>苦薏气象台首页 | 苦薏气象台</title><meta name="description" content="VKMC	"><style>
+</style></head><body><nav style="background-color: #212529;padding-top: 2%;padding-bottom: 2%;padding-left: 5%;padding-right: 5%;display: inline-flex;width: 90%;top: 0px;left: 0px;position: absolute" id="main_nav" onclick="playImage()"><span style="color: orange;font-size: 15px;">苦薏气象台</span><div align="right" style="width: 100%;padding-right: 0%"><button class="nav_buttons" onclick="games()">Games</button><button class="nav_buttons" onclick="window.location.assign('./forsida.html')">主页</button><button class="nav_buttons2" onclick="window.location.assign('./vedur.html')">气象</button></div></nav><div align="center" style="height: 100%;" id="main"><div class="menu" align="center" onclick="menu()">≡</div><div align="center" style="height: 100%;padding-top: 20%;z-index: 9999;"><h2 id="now" align="center" style="color: black;text-shadow: -0.5px 0.5px 0.5px #000, 0.5px 0.5px 0.5px #000;"></h2></form></div><script>
+        var establishDate = new Date("2022/10/08");
+        var today = new Date();
+        var diffTime = Math.abs(today - establishDate);
+        var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        var p2 = document.getElementById('now')
+             updateTime()
+        function updateTime(){
+            p2.innerText = new Date().getHours() + ':' +  new Date().getMinutes() + ':' + new Date().getSeconds()
+            setTimeout('updateTime()',1000)
+        }
+       (function(d, s, id) {
+           if (d.getElementById(id)) {
+               if (window.__TOMORROW__) {
+                   window.__TOMORROW__.renderWidget();
+               }
+               return;
+           }
+           const fjs = d.getElementsByTagName(s)[0];
+           const js = d.createElement(s);
+           js.id = id;
+           js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
+           fjs.parentNode.insertBefore(js, fjs);
+       })(document, 'script', 'tomorrow-sdk');
+       </script><div class="tomorrow" data-location-id="019332" data-language="EN" data-unit-system="METRIC" data-skin="light" data-widget-type="aqiPollen" style="padding-bottom:22px;position:relative;"><a href="https://api.tomorrow.io/v4/timelines?location=40.75872069597532,-73.98529171943665&fields=temperature&timesteps=1h&units=metric&apikey=H923OgBTCYPkbp3s6ioaIYORM9DTZ0er" rel="nofollow noopener noreferrer" target="_blank" style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;"></a></div></div><br><div class="info-div">
+   
+</script>
